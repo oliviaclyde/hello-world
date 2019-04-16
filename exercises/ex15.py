@@ -22,3 +22,6 @@ file_again = input("> ")
 txt_again = open(file_again)
 #The line is printing the txt_again variable and telling it to read. We know txt_again will open file_again which will then prompt input from the user
 print(txt_again.read())
+#Closing the files
+print(txt.close())
+print(txt_again.close())
