@@ -38,11 +38,15 @@ class Car:
 
     def drive(self):
         print("All parts assembled. Ready to go!")
+        print(self.wheels)
+
+
 
 trip = Car('Goodrich', '4-door', 'automatic windows', 'supercharged' )
+trip2 = Car('Ford', '2-door', 'no windows', 'poo' )
 
-print(trip.drive())
-
+trip.drive()
+trip2.drive()
 
 
 
@@ -57,7 +61,7 @@ print(trip.drive())
 #Create method inside a class
 class Employee:
     #create __init__ method (constructor)
-    def __init__(self, first, last, pay): #instance is the first argument automactially. Convention calls it self
+    def __init__(self, first, last, pay): #instance is the first argument automactially. Convention calls it "self"
         self.first = first
         self.last = last
         self.pay = pay
