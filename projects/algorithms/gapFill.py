@@ -46,20 +46,21 @@ title = str(soup.title)
 #tr = table rows; th = table headers; td = table cells
 
 
-
 #rows = soup.find_all("tr", {"class": "BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)"})
 rows = soup.find_all("table", {"class": "W(100%) M(0)"})
 #print(rows)
 #iterate through the rows to make the data into a list
 for row in rows:
     #row_td = row.find_all("td")
+    #Find all table headers
     row_tr = (row.contents[0].find_all({"tr": "Fw(400) Py(6px)"}))
+    #Find all table data
     row_td = (row.contents[1].find_all({"td": "Py(10px) Pstart(10px)"}))
 
 #print(row_td)
 #print(row_tr)
 #type(row_tr)
-#type(row_td)
+type(row_td)
 
 #remove HTML tags
 #str_cells = str(row_tr) + str(row_td)
@@ -67,16 +68,16 @@ str_cells = str(row_td)
 cleantitle = BeautifulSoup(title, "lxml").get_text()
 cleantext = BeautifulSoup(str_cells, "lxml").get_text()
 #print(cleantitle)
-print(cleantext)
+#print(cleantext)
 
 
 #convert to DataFrame
-#df = pd.read_html(str(row_td))[0]
-#print(df)
-
-#df = pd.DataFrame(cleantext)
+#df = pd.read_html(html, header=0)
 #df.head(3)
+#df.to_csv("SPY.csv")
 
+df = pd.read_html(str(rows))
+#df_save = df.to_csv(r"Users/oliviaclyde/AlgoLemon/AlgoLemon_Core_Dev/algorithms/SPY.csv")
 
 #Copy the df to new df using only open close bars
 
