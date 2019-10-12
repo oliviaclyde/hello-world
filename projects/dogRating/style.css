@@ -1,0 +1,78 @@
+/* Border-box includes any margins and paddings when calculating total space */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    /*I wanted a clean-looking, modern font so I used Google fonts.*/
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    margin: 5px;
+    padding: 0 0 200px 0;
+  }
+  
+  h1 {
+    font-size: 80px;
+    color: #000;
+  }
+
+  .main-nav {
+    /* background-color: lightblue;  */
+    color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: right;
+    list-style: none;
+    padding: none;
+    margin: 0;
+    height: 200px;
+  }
+  
+  .main-nav a {
+    float: right;
+    display: inline;
+    color: #000;
+    font-size: 25px;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+  }
+  .main-nav a:hover {
+    color: blue;
+  }
+
+  div {
+    height: 200px;
+    background-size: cover;
+    margin: 40px 0 0 0;
+    max-width: 600px;
+    position: relative;
+    border-radius: 12px;
+    font-size: 25px;
+  }
+
+  select {
+    font-size: 25px;
+    position: left;
+  }
+
+  footer {
+    background-image: url("bd.png");
+    background-repeat: repeat-x;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 0;
+    height: 700px;
+  } 
+
+  /* This is to make it compatible with smaller devices. Must go at the end. */
+@media screen and (max-width: 600px) {
+    h1 {
+      font-size: 50px;
+    }
+    
+    /* p {
+      font-size: 20px;
+    } */
+  }
+  
