@@ -21,19 +21,14 @@
     </nav>
     <div>
         <p>Like the dog? Give it a higher rating! <br><br><br></p>
-    <!-- Need to add image and API for random dog pic -->
-        <img id="dog">
-    <select> 
-        <!-- Need to access API for list of all breeds and replace it here-->
-        <option value="Labradoodle">Labradoodle</option>
-        <option value="Chow Chow">Chow Chow</option>
-        <option value="Maltese">Maltese</option>
-        <option value="Shih Tzu">Shih Tzu</option>
-        <option value="French Bulldog">French Bulldog</option>
-        <option value="Unknown">Unknown</option>
+    <!-- jQuery will access dog API for random dog image -->
+        <img id="dog" width="500px" height="500px">
+    <select id="breedDropdown"> 
+        <!-- jQuery will access dog API for list of all breeds-->
+        <option value=''>Random Breed</option>
     </select>
-    <button id="selectDog">Go</button>
-    <select required>
+    <button id="selectDog" onclick="GetRandomDog()">Get Dog</button>
+    <select id="rating" required>
          <option value="10">10</option>
          <option value="11">11</option>
          <option value="12">12</option>
@@ -42,7 +37,7 @@
          <option value="15">15</option>
          <option value="16">16</option>
     </select>
-    <button id="rateDog">Go</button>
+    <button id="rateDog" onclick="RateDog()">Rate Dog</button>
     </div>
 </body>
 
