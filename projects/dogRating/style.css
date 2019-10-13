@@ -51,6 +51,7 @@
     font-size: 25px;
   }
 
+ 
   select {
     font-size: 25px;
     position: left;
@@ -62,7 +63,10 @@
     text-align: center;
     font-size: 12px;
     margin-bottom: 0;
-    height: 700px;
+    height: 70px;
+    width:100%;
+    position:fixed;
+    bottom:0;
   } 
 
   /* This is to make it compatible with smaller devices. Must go at the end. */
