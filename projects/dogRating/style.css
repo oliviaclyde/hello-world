@@ -14,11 +14,10 @@
   h1 {
     font-size: 80px;
     color: #000;
+    background-color: lightblue; 
   }
 
   .main-nav {
-    /* background-color: lightblue;  */
-    color: #000;
     position: fixed;
     top: 0;
     width: 100%;
