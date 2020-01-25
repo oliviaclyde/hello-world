@@ -8,7 +8,7 @@ newList = []
 
 def listOfNum():
     newList.append(a[0])
-    newList.append(a[len(a)-1])
+    newList.append(a[-1])
 
 
 
