@@ -9,8 +9,14 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
 def inList(): 
     new_list = [item for item in a if item in b]
-
-
+    
+    for i in new_list:
+        i = 0
+        n = i + 1
+        if new_list[i] == new_list[n]:
+            new_list.pop(i)
+            i+=1
+          
     print(new_list)
 
 
