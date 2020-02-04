@@ -8,6 +8,8 @@ with open('test.txt', 'r') as my_file:
     print(words)
 
 
+
+
 # Read file and count how many times the same word appears
 
 file = open('test.txt', 'r')
@@ -20,18 +22,22 @@ for item in wordCount.items():
     print("{}\t{}".format(*item))
 
 
+
+
 # Read file and count how many are in each category
 
-with open('test2.txt') as f:
-    line = f.readline() 
+from collections import Counter
 
-line = line[3:-26]
-
-print(line)
+def main():
+    with open('test2.txt') as file:
+        for line in file:
+            line = line.split("/")[2]
+            print(line)
+    
+main()
 
 # while line:
 #     categoryCount = Counter(line)
 
 #     for item in categoryCount.items():
 #         print("{}\t{}".format(*item))
-    
