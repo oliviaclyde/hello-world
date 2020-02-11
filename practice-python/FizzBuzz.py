@@ -5,23 +5,19 @@
 class Solution:
     def fizzBuzz(self, n):
         numbers = []
-        a = 0
-        while a < (n+1): 
-            numbers.append(a)
-            a+=1
-        print(numbers)
         
-        for num in numbers:
+        for num in range(1, n+1):
             if num % 3 == 0 and num % 5 == 0:
-                print("FizzBuzz")
+                numbers.append("FizzBuzz")
             elif num % 3 == 0:
-                print("Fizz")
+                numbers.append("Fizz")
             elif num % 5 == 0:
-                print("Buzz")
+                numbers.append("Buzz")
             else:
-                print (num)
-       
-        
+                numbers.append(str(num))
+
+        print(numbers)
+
 mySolution = Solution()        
 
 mySolution.fizzBuzz(15)
