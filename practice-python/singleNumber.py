@@ -14,20 +14,24 @@
 class Solution:
     def singleNumber(self, nums) -> int:
         newList = set()
-        answer = nums[0]
+        comparisonNumber = nums[0]
         
-        for n in nums:
-            i = 1
-            if nums[i] == answer:
-                newList.add(n)
+        for n in range(1, len(nums)):
+            # print(n, nums[n])
+
+            if nums[n] == comparisonNumber:
+                newList.add(nums[n])
+            
             else:
-                answer == n
-            i += 1
+                comparisonNumber = int(nums[n])
 
 
-        nums = set(nums)            
-        print(nums.difference(newList))
+        numsNew = set(nums)   
         
+        print(numsNew.difference(newList))
+        # Result needs to be an int 
+        
+    
 
 # If equal, make a new array
 # Convert both to set
@@ -38,4 +42,5 @@ class Solution:
 
 attempt = Solution()
 
-attempt.singleNumber([4, 1, 2, 1, 2])
+attempt.singleNumber([4, 1, 2, 1, 2]) 
+# attempt.singleNumber([2, 1, 1])
