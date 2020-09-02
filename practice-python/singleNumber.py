@@ -11,36 +11,26 @@
 # Output: 4
 
 
+
+
 class Solution:
     def singleNumber(self, nums) -> int:
-        newList = set()
-        comparisonNumber = nums[0]
         
-        for n in range(1, len(nums)):
-            # print(n, nums[n])
-
-            if nums[n] == comparisonNumber:
-                newList.add(nums[n])
-            
-            else:
-                comparisonNumber = int(nums[n])
-
-
-        numsNew = set(nums)   
+        newList = []
+        for n in nums:
+            if n not in newList:
+                newList.append(nums[n])
         
-        print(numsNew.difference(newList))
-        # Result needs to be an int 
+        newList = set(newList)
+        result = list(set(nums).difference(newList))
+        print(int(result[0]))
         
+
     
-
-# If equal, make a new array
-# Convert both to set
-# Compare which element isn't in the new set
-# Return that element as int
-
 
 
 attempt = Solution()
 
 attempt.singleNumber([4, 1, 2, 1, 2]) 
-# attempt.singleNumber([2, 1, 1])
+attempt.singleNumber([2, 1, 1])
+attempt.singleNumber([5,7,6,7,3,2,2,3,5,6,8,1,9,8,1])
