@@ -7,15 +7,18 @@
 
 # versions = ["1.11", "2.0.0", "1.2", "2", "0.1", "1.2.1", "1.1.1", "2.0"]
 
-versions = ["1.0.12", "1.0.2"]
+
+# Will only work in Python 2.7.16, unsure why it won't run in Python 3.7.2
+versions = ["1.1.2", "1.0", "1.3.3", "1.0.12", "1.0.2"]
 
 def parseString(l):
     parsed = [item.split(".") for item in l]
-    print(parsed)
+    # print(parsed)
     listOfNums = [map(int, item) for item in parsed]
-
-    for index, value in enumerate(listOfNums):
-        print(list(value))
+    sortedList = sorted(listOfNums)
+    sortedJoined = [('.'.join(str(ii) for ii in item)) for item in sortedList]
+    return sortedJoined
+   
 
     
-parseString(versions)
+print(parseString(versions))
